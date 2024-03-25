@@ -1,0 +1,31 @@
+.neon-blue-background {
+    -fx-background-color: #00bfff; /* Neon blue color */
+}
+
+.neon-blue-gradient-background {
+    -fx-background-color: linear-gradient(to bottom, #00bfff, #0ff); /* Neon blue gradient */
+}
+
+.text-white {
+    -fx-text-fill: white;
+}
+
+.text-cyan {
+    -fx-text-fill: cyan;
+}
+
+.bold {
+    -fx-font-weight: bold;
+}
+
+.bodoni {
+    -fx-font-family: "Bodoni MT";
+}
+
+.system-bold {
+    -fx-font-family: "System Bold";
+}
+
+#loginPage {
+    -fx-background-image: url("@imagehong/your_background_image.jpg");
+}

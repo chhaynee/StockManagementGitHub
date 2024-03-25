@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="ViewProduct" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stockmanagement.Categorypage.CategorypageVIewProduct">
+    <children>
+        <AnchorPane layoutX="640.0" prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: lightgrey;">
+            <children>
+                <TableView fx:id="productData" layoutY="238.0" prefHeight="364.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn fx:id="ProdId" maxWidth="1.7976931348623157E308" prefWidth="68.20001220703125" text="ID" />
+                        <TableColumn fx:id="ProdName" prefWidth="151.4000244140625" text="Name" />
+                        <TableColumn fx:id="ProdType" prefWidth="98.0" text="Product_Type" />
+                        <TableColumn fx:id="ProdStocks" prefWidth="81.800048828125" text="Quantity" />
+                        <TableColumn fx:id="ProdPrice" prefWidth="106.199951171875" text="Price_In($)" />
+                  <TableColumn fx:id="ProdPrice1" prefWidth="98.2000732421875" text="Price_Out($)" />
+                    </columns>
+                </TableView>
+                <AnchorPane prefHeight="237.0" prefWidth="600.0" style="-fx-background-color: #B0BEC5;">
+                    <children>
+                        <TextField fx:id="txtProdId" layoutX="79.0" layoutY="21.0" promptText="ID" />
+                        <TextField fx:id="txtProdName" layoutX="79.0" layoutY="55.0" promptText="Name" />
+                        <TextField fx:id="txtProdType" layoutX="79.0" layoutY="90.0" prefHeight="26.0" prefWidth="151.0" promptText="Product_Types" />
+                        <TextField fx:id="txtProdStock" layoutX="79.0" layoutY="129.0" prefHeight="26.0" prefWidth="151.0" promptText="Quantity" />
+                        <Button fx:id="btnAddProd" layoutX="272.0" layoutY="26.0" mnemonicParsing="false" onAction="#addOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: #1A237E;" text="Add Product" textFill="WHITE" />
+                        <Button fx:id="btnRemoveProd" layoutX="272.0" layoutY="68.0" mnemonicParsing="false" onAction="#removeOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: #1A237E;" text="Remove Product" textFill="WHITE" />
+                        <Button fx:id="btnUpdateProd" layoutX="272.0" layoutY="111.0" mnemonicParsing="false" onAction="#updateOnClick" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: #1A237E;" text="Update Product" textFill="WHITE" />
+                        <Button fx:id="btnSearch" layoutX="409.0" layoutY="28.0" mnemonicParsing="false" onAction="#searchOnClick" prefHeight="75.0" prefWidth="130.0" style="-fx-background-color: #1A237E;" text="Search item" textFill="WHITE" />
+                        <Button fx:id="btnShowAll" layoutX="409.0" layoutY="111.0" mnemonicParsing="false" onAction="#displayTable" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #1A237E;" text="Show All Product" textFill="WHITE" />
+                        <Label fx:id="txtLabel" alignment="CENTER" layoutX="272.0" layoutY="163.0" prefHeight="26.0" prefWidth="268.0" style="-fx-background-color: #E3F2FD;" textFill="RED" />
+                        <TextField fx:id="txtProdPrice" layoutX="80.0" layoutY="164.0" prefHeight="26.0" prefWidth="151.0" promptText="Price_In($)" />
+                  <Pane layoutX="411.0" layoutY="62.0" prefHeight="75.0" prefWidth="79.0" />
+                    </children>
+                </AnchorPane>
+            <TextField fx:id="txtProdPrice1" layoutX="80.0" layoutY="200.0" prefHeight="26.0" prefWidth="151.0" promptText="Price_Out($)" />
+            </children></AnchorPane>
+      <AnchorPane layoutX="440.0" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #A95C68;">
+         <children>
+            <Label alignment="CENTER" layoutX="37.0" layoutY="87.0" text="Add Product" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutY="169.0" prefHeight="261.0" prefWidth="200.0" style="-fx-background-color: #800000;" AnchorPane.bottomAnchor="170.2" AnchorPane.topAnchor="169.0">
+               <children>
+                  <Button fx:id="DashboardButton" mnemonicParsing="false" onAction="#handleDashboradButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue; -fx-border-width: 2px; -fx-cursor: pointer;" text="DashBoard">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="ViewProductButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#HandleViewProductButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white;" text="View Product">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="AddProduchtButton" layoutX="20.0" layoutY="60.0" mnemonicParsing="false" onAction="#HandleAddProdurctButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Add Product">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="InvoiceButton" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Invoice">
+                     <VBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="600.0" prefWidth="438.0">
+         <children>
+            <ImageView fitHeight="662.0" fitWidth="438.0" layoutY="-62.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../sreyrothfxmlpart/stockmanagementpic.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

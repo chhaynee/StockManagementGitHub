@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="Invoice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1240.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stockmanagement.sreyrothpart.InvoiceViewController">
+    <children>
+        <AnchorPane layoutX="440.0" prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #A95C68;">
+            <children>
+                <Label alignment="CENTER" layoutX="37.0" layoutY="87.0" text="Add Product" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="20.0" />
+                    </font>
+                </Label>
+                <VBox layoutY="169.0" prefHeight="261.0" prefWidth="200.0" style="-fx-background-color: #800000;" AnchorPane.bottomAnchor="170.2" AnchorPane.topAnchor="169.0">
+                    <children>
+                        <Button fx:id="DashboardButton" mnemonicParsing="false" onAction="#handleDashboradButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue; -fx-border-width: 2px; -fx-cursor: pointer;" text="DashBoard">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="ViewProductButton" layoutX="20.0" layoutY="20.0" mnemonicParsing="false" onAction="#HandleViewProductButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="View Product">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="AddProduchtButton" layoutX="20.0" layoutY="60.0" mnemonicParsing="false" onAction="#HandleAddProdurctButton" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: lightblue;" text="Add Product">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                        <Button fx:id="InvoiceButton" layoutX="20.0" layoutY="100.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: white;" text="Invoice">
+                            <VBox.margin>
+                                <Insets bottom="10.0" top="10.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane prefHeight="600.0" prefWidth="438.0">
+            <children>
+                <ImageView fitHeight="662.0" fitWidth="438.0" layoutY="-62.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@stockmanagementpic.jpg" />
+                    </image>
+                </ImageView>
+            </children>
+        </AnchorPane>
+        <Pane layoutX="640.0" prefHeight="600.0" prefWidth="602.0" style="-fx-background-color: grey;">
+            <children>
+                <Label layoutX="257.0" layoutY="14.0" text="Invoice" textFill="WHITE">
+                    <font>
+                        <Font size="28.0" />
+                    </font>
+                </Label>
+                <Button layoutX="537.0" layoutY="555.0" mnemonicParsing="false" onAction="#handlePrintInvoice" text="Print" />
+            <BorderPane layoutX="52.0" layoutY="72.0" prefHeight="456.0" prefWidth="497.0">
+               <top>
+                  <Label text="Label" BorderPane.alignment="CENTER" />
+               </top>
+               <center>
+                  <GridPane prefHeight="435.0" prefWidth="327.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="70.0" prefWidth="62.0" text="Label" />
+                        <Label text="Label" GridPane.columnIndex="1" />
+                        <TextArea prefHeight="96.0" prefWidth="181.0" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+                        <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </center>
+            </BorderPane>
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

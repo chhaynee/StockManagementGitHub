@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="SkincarePage" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #B2DFDB;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.stockmanagement.sreyrothpart.SkincareController">
+    <children>
+        <Label fx:id="DrinkLabel" alignment="CENTER" layoutX="228.0" layoutY="14.0" prefHeight="43.0" prefWidth="144.0" text="Skincare">
+            <font>
+                <Font name="Century Schoolbook Bold" size="30.0" />
+            </font></Label>
+        <TableView fx:id="tableView" accessibleRole="CONTEXT_MENU" layoutX="31.0" layoutY="75.0" prefHeight="216.0" prefWidth="538.0" style="-fx-background-color: #EFEBE9; -fx-border-color: #FFEE58;">
+            <columns>
+                <TableColumn prefWidth="75.0" text="ID" />
+                <TableColumn prefWidth="126.39998626708984" text="Name " />
+                <TableColumn prefWidth="127.5999755859375" text="Quantity " />
+                <TableColumn prefWidth="106.0" text="Price -in " />
+                <TableColumn prefWidth="101.5999816894531" text="Price -Out " />
+            </columns>
+        </TableView>
+        <Button fx:id="addButton" alignment="CENTER_RIGHT" layoutX="189.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #FF5722; -fx-border-color: #3E2723;" text="Add " textFill="#fafafa">
+            <font>
+                <Font name="ACaslonPro-Bold" size="18.0" />
+            </font></Button>
+        <Button fx:id="editButton" alignment="CENTER_RIGHT" layoutX="323.0" layoutY="316.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #F9A825; -fx-border-color: #3E2723;" text="Edit " textFill="#fafafa">
+            <font>
+                <Font name="ACaslonPro-Bold" size="18.0" />
+            </font></Button>
+        <Button fx:id="deleteButton" alignment="CENTER_RIGHT" layoutX="455.0" layoutY="315.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="117.0" style="-fx-background-color: #388E3C; -fx-border-color: #3E2723;" text="Delete " textFill="#fafafa">
+            <font>
+                <Font name="ACaslonPro-Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="printButton" alignment="CENTER_RIGHT" layoutX="62.0" layoutY="316.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="110.0" style="-fx-background-color: #2196F3; -fx-border-color: #3E2723;" text="Print" textFill="#fafafa">
+            <font>
+                <Font name="ACaslonPro-Bold" size="18.0" />
+            </font>
+        </Button>
+        <Pane layoutX="50.0" layoutY="315.0" prefHeight="43.0" prefWidth="60.0">
+            <children>
+                <ImageView fitHeight="43.0" fitWidth="33.0" layoutX="27.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imagesreyroth/Print-Icon .png" />
+                    </image>
+                </ImageView>
+                <Pane layoutX="140.0" prefHeight="43.0" prefWidth="48.0">
+                    <children>
+                        <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="18.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@imagesreyroth/product.png" />
+                            </image></ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </Pane>
+        <Pane layoutX="324.0" layoutY="315.0" prefHeight="43.0" prefWidth="54.0">
+            <children>
+                <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="11.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imagesreyroth/Edit.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Pane layoutX="455.0" layoutY="316.0" prefHeight="43.0" prefWidth="48.0">
+            <children>
+                <ImageView fitHeight="33.0" fitWidth="33.0" layoutX="8.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@imagesreyroth/editnobg.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <ImageView fitHeight="69.0" fitWidth="74.0" layoutX="31.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@imagesreyroth/MyProjectLogo.png" />
+            </image></ImageView>
+      <Button layoutX="62.0" layoutY="359.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+    </children>
+</AnchorPane>
